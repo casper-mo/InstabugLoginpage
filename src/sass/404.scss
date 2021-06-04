@@ -1,0 +1,40 @@
+@import "./global.scss";
+
+.not-found__page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    color: $text-color;
+    font-size: 12.5rem;
+    letter-spacing: 0.1em;
+    margin: 0.025em 0;
+    text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+
+    @media (max-width: 30rem) {
+      font-size: 8.5rem;
+    }
+
+    & > span {
+      animation: spooky 2s alternate infinite linear;
+      color: $ghost;
+      display: inline-block;
+    }
+  }
+
+  h2 {
+    color: $text-color;
+    margin-bottom: 0.4em;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: $text-secondary-color;
+    margin-top: 0;
+  }
+}

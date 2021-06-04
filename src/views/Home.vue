@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Welcome {{ userEmail }}</h1>
+    <button @click="logout">logout</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+const email = JSON.parse(localStorage.getItem("user"));
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  name: "LoginForm",
+  data() {
+    return { userEmail: email };
+  },
+  methods: {
+    logout: function () {
+      localStorage.removeItem("user");
+      this.$router.replace("/login");
+    },
+  },
+  mounted: function () {
+    if (!localStorage.getItem("user")) {
+      this.$router.replace("/login");
+    }
   },
 };
 </script>
+<style lang="scss">
+@import "@/sass/home.scss";
+</style>

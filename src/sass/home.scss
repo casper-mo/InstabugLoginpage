@@ -1,0 +1,21 @@
+@import "./global.scss";
+.home {
+  height: 100vh;
+  @include flexCenter(column);
+  h1 {
+    color: $bg-color;
+    margin-bottom: 15px;
+  }
+  button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #df4759;
+    color: $primary-color;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 6px 10px #df47594d;
+    font-weight: weight(bold);
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}

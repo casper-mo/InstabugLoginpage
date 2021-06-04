@@ -1,0 +1,29 @@
+@import "./varabiles";
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $key: $weight-name);
+}
