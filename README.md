@@ -1,24 +1,7 @@
-# test
+# instabug Login page
 
-## Project setup
-```
-npm install
-```
+### [Live Site](https://eloquent-liskov-70bc86.netlify.app/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Install
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- run `npm i && npm start`.
