@@ -16,6 +16,7 @@ export default {
     Carousel,
   },
   mounted: function () {
+    document.title = "Login | instabug";
     if (localStorage.getItem("user")) {
       this.$router.replace("/welcome");
     }

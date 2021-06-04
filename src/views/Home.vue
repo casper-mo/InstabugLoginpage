@@ -6,7 +6,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 const email = JSON.parse(localStorage.getItem("user"));
 export default {
   name: "LoginForm",
@@ -20,6 +19,8 @@ export default {
     },
   },
   mounted: function () {
+    document.title = "Welcome | instabug";
+
     if (!localStorage.getItem("user")) {
       this.$router.replace("/login");
     }

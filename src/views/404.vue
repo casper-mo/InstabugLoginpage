@@ -6,7 +6,15 @@
   </main>
 </template>
 
+<script>
+export default {
+  name: "404 ",
 
+  mounted: function () {
+    document.title = "404 instabug";
+  },
+};
+</script>
 
 <style lang="scss">
 @import "@/sass/404.scss";
